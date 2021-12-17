@@ -12,6 +12,10 @@ $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque sa
 // per stampare la variabile
 // echo $paragrafo;
 
+$repeater = 3;
+
+$starteCharacter = 345;
+
 ?>
 
 
@@ -36,6 +40,18 @@ $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque sa
 
    <p>
       Il paragrafo senza parolacce è: <br> <?php echo str_replace('badword','***', $paragrafo); ?> 
+   </p>
+
+   <p>
+      Il paragrafo ripetuto <?php echo $repeater; ?> volte è: <br> <?php echo str_repeat ($paragrafo, $repeater); ?>
+   </p>
+
+   <p>
+      Il paragrafo al contrario è: <br> <?php echo strrev ($paragrafo); ?>
+   </p>
+
+   <p>
+      Il paragrafo a partire dal carattere <?php echo $starteCharacter ?> è: <br> <?php echo substr($paragrafo, $starteCharacter); ?>
    </p>
 
 </body>
