@@ -6,7 +6,11 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
 <?php
 
-$paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing badword. Eaque saepe illum itaque iste dolore repellat veniam, voluptatem badword neque incidunt unde soluta amet dolorum badword, odit adipisci doloribus. Ex badword nihil hic aspernatur sequi labore nobis, officia ab voluptatum id badword aliquid molestiae blanditiis quidem in badword fugit ratione est?"
+$paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque saepe illum itaque iste dolore repellat veniam, voluptatem vitae neque incidunt unde soluta amet dolorum quas, odit adipisci doloribus. badword nihil hic aspernatur sequi labore nobis, officia ab voluptatum id adipisci aliquid molestiae blanditiis quidem in laudantium fugit ratione est? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque saepe illum itaque iste dolore repellat veniam, voluptatem vitae neque incidunt unde soluta amet dolorum quas, odit adipisci doloribus. Ex error nihil hic aspernatur sequi labore nobis, badword ab voluptatum id adipisci aliquid molestiae badword quidem in laudantium fugit ratione est? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque saepe illum itaque iste dolore repellat veniam, voluptatem vitae neque incidunt unde soluta amet dolorum quas, odit adipisci doloribus. Ex error nihil hic aspernatur sequi labore nobis, officia ab voluptatum id badword aliquid molestiae blanditiis quidem in laudantium fugit ratione est? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque saepe illum badword iste dolore repellat veniam, voluptatem vitae neque incidunt unde soluta amet dolorum quas, odit adipisci doloribus. Ex error nihil hic aspernatur sequi labore nobis, officia ab voluptatum id adipisci aliquid molestiae blanditiis quidem in badword fugit ratione est?";
+
+
+// per stampare la variabile
+// echo $paragrafo;
 
 ?>
 
@@ -22,7 +26,17 @@ $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing badword. Eaque
 </head>
 <body>
 
+   <!-- così per stampare la variabile (tramite echo) -->
+   <p>Il paragrafo è: <br> <?php echo $paragrafo; ?> </p>
    
-   
+   <h4>
+      <!-- per conoscere il numero dei caratteri "strlen" -- string length -->
+      La lunghezza di questo paragrafo è: <?php echo strlen($paragrafo) ?>
+   </h4>
+
+   <p>
+      Il paragrafo senza parolacce è: <br> <?php echo str_replace('badword','***', $paragrafo); ?> 
+   </p>
+
 </body>
 </html>
