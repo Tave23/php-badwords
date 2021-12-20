@@ -40,11 +40,7 @@ $badword = $_GET['parolaccia'];
       <!-- per conoscere il numero dei caratteri "strlen" -- string length -->
       La lunghezza di questo paragrafo è: <?php echo strlen($paragrafo) ?>
    </h4>
-
-   <p>
-      Il paragrafo senza parolacce è: <br> <?php echo str_replace('$badword','!!!!!!!!', $paragrafo); ?> 
-   </p>
-
+   
    <p>
       Il paragrafo ripetuto <?php echo $repeater; ?> volte è: <br> <?php echo str_repeat ($paragrafo, $repeater); ?>
    </p>
