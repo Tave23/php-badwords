@@ -16,6 +16,9 @@ $repeater = 3;
 
 $starteCharacter = 345;
 
+$badword = $_GET['parolaccia'];
+// $badword = 'badword';
+
 ?>
 
 
@@ -39,7 +42,7 @@ $starteCharacter = 345;
    </h4>
 
    <p>
-      Il paragrafo senza parolacce è: <br> <?php echo str_replace('badword','***', $paragrafo); ?> 
+      Il paragrafo senza parolacce è: <br> <?php echo str_replace('$badword','!!!!!!!!', $paragrafo); ?> 
    </p>
 
    <p>
@@ -52,6 +55,12 @@ $starteCharacter = 345;
 
    <p>
       Il paragrafo a partire dal carattere <?php echo $starteCharacter ?> è: <br> <?php echo substr($paragrafo, $starteCharacter); ?>
+   </p>
+
+   <hr>
+
+   <p>
+      Il paragrafo senza parolacce è: <br> <?php echo str_replace($_GET['parolaccia'],'!!!!!!!!', $paragrafo); ?> 
    </p>
 
 </body>
